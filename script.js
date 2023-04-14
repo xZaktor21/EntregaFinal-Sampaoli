@@ -1,4 +1,4 @@
-alert ("Bienvenidos a CoderDAO!! El precio actual de la CoderCoin es de $0,27.");
+alert ("Bienvenidos a CoderSwap!! El precio actual de la CoderCoin es de $0,27.");
 
 let usuario = prompt("Por favor, ingrese un nombre de usuario:");
 
