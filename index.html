@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CSS/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+
+
+    <!--<script src="script.js"></script>-->
+    <title>CoderSwap</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo"><i class="ri-home-2-line"></i><span>Logo</span></a>
+        <div class="main">
+            <a href="#" class="user">Ingresar</a>
+            <a href="#">Registrarse</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+          <form id="simulador">
+            <label for="tipo-operacion">Selecciona el tipo de operación:</label>
+            <select id="tipo-operacion" name="tipo-operacion">
+              <option value="compra">Compra</option>
+              <option value="venta">Venta</option>
+            </select>
+            <label for="filtro-moneda">Selecciona la moneda a comprar:</label>
+            <select id="filtro-moneda">
+              <option value="btc">BTC</option>
+              <option value="eth">ETH</option>
+              <option value="bnb">BNB</option>
+              <option value="doge">DOGE</option>
+            </select>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required>
+            <button type="submit">Ejecutar transacción</button>
+          </form>
+          <div id="resultado"></div>
+          <div class="historial">
+            <button id="ver-historial">Ver historial de transacciones</button>
+            <select id="filtro-tipo">
+              <option value="todos">Todos</option>
+              <option value="compra">Compras</option>
+              <option value="venta">Ventas</option>
+            </select>
+            <ul id="lista-transacciones"></ul>
+          </div>
+        </div>
+      </main>
+    <div class="caja">
+        <div class="price">
+            <div class="logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" class="coin-logo"></div>
+            <div>
+                <p class="price-coin">$<span id="btc"></span></p>
+                <p class="coin-name">Bitcoin</p>
+            </div>
+        </div>
+        <div class="price">
+            <div class="logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" class="coin-logo"></div>
+            <div>
+                <p class="price-coin">$<span id="eth"></span></p>
+                <p class="coin-name">Ethereum</p>
+            </div>
+        </div>
+        <div class="price">
+            <div class="logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png" class="coin-logo"></div>
+            <div>
+                <p class="price-coin">$<span id="bnb"></span></p>
+                <p class="coin-name">Binance Coin</p>
+            </div>
+        </div>
+        <div class="price">
+            <div class="logo"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/74.png" class="coin-logo"></div>
+            <div>
+                <p class="price-coin">$<span id="doge"></span></p>
+                <p class="coin-name">Dogecoin</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./Scripts/price-api.js"></script>
+    <script src="./Scripts/compra-venta.js"></script>
+
+
+</body>
+
+</html>
